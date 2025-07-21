@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Private Spots List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Spots 📍</h1>
+  </header>
+
+  <main>
+    <div class="unlock-buttons">
+      <button onclick="unlockList(1)">Access List 1</button>
+      <button onclick="unlockList(2)">Access List 2</button>
+    </div>
+
+    <!-- List 1 Section -->
+    <section id="list1" class="list-section" style="display: none;">
+      <h2>List 1 🌸🎀</h2>
+      <div class="form-section">
+        <form id="spotForm1">
+          <input type="text" id="spotName1" placeholder="Spot Name" required />
+          <input type="url" id="spotLink1" placeholder="Spot Link (optional)" />
+          <button type="submit">Add Spot</button>
+        </form>
+      </div>
+      <ul id="spotList1"></ul>
+    </section>
+
+    <!-- List 2 Section -->
+    <section id="list2" class="list-section" style="display: none;">
+      <h2>List 2 ☕🎀💜🌞🍓</h2>
+      <div class="form-section">
+        <form id="spotForm2">
+          <input type="text" id="spotName2" placeholder="Spot Name" required />
+          <input type="url" id="spotLink2" placeholder="Spot Link (optional)" />
+          <button type="submit">Add Spot</button>
+        </form>
+      </div>
+      <ul id="spotList2"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
