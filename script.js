@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // === CONFIGURATION ===
     // Define constant passwords for each list
     const PWD_LIST1 = "pass123"; // Password for list1.html (or list1-page)
-    const PWD_LIST2 = "secret456"; // Password for list2.html (or list2-page)
+    const PWD_LIST2 = "group123"; // Password for list2.html (or list2-page)
     // =====================
 
     // Determine which page is loaded
@@ -164,5 +164,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
 
