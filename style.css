@@ -1,133 +1,197 @@
+/* 1. Import "Overpass" from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* Basic Reset & Body Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f3f4f6;
+    /* REVERTED TO ORIGINAL COLOR */
+    font-family: 'Overpass', sans-serif;
+    background-color: #DCCFC0; /* Original light pink background */
+    color: #437057; /* Original body text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
-header {
-  background-color: #16a34a; /* Green header */
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  height: 60px;
+/* Banner Styling */
+.banner {
+    width: 100%;
+    background-color: #d1ed9a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 30px 5%;
+    margin-bottom: 40px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
+.banner h1 {
+    color: #437057;
+    font-size: 80px;
+    font-weight: bold;
 }
 
-main {
-  padding: 20px;
-}
-
-.form-section {
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
-}
-
-form {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-input[type="text"],
-input[type="url"] {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  width: 250px;
-}
-
-button {
-  padding: 10px 16px;
-  background-color: #22c55e; /* Green button */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #16a34a; /* Darker green on hover */
-}
-
-.list-section {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 800px;
-  margin: 0 auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.list-section h2 {
-  margin-top: 0;
-  font-size: 1.5rem;
-  color: #111827;
-}
-
-#spotList1,
-#spotList2 {
-  list-style: none;
-  padding: 0;
-}
-
-#spotList1 li,
-#spotList2 li {
-  background-color: #f9fafb;
-  margin-bottom: 10px;
-  padding: 12px;
-  border-left: 5px solid #16a34a; /* Green side border */
-  border-radius: 5px;
-}
-
-#spotList1 li strong,
-#spotList2 li strong {
-  display: block;
-  font-size: 1.1rem;
-  color: #111827;
-}
-
-#spotList1 li a,
-#spotList2 li a {
-  color: #15803d; /* Link color in green */
-  text-decoration: none;
-}
-
-#spotList1 li a:hover,
-#spotList2 li a:hover {
-  text-decoration: underline;
-}
-
-.unlock-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-  margin-bottom: 50px; /* 👈 this pushes the list blocks downward */
+.banner h1 a {
+    text-decoration: none;
+    color: inherit;
 }
 
 
-.unlock-buttons button {
-  padding: 10px 20px;
-  background-color: #059669; /* Emerald green */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
+/* Main Content Container */
+.content-container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
 }
 
-.unlock-buttons button:hover {
-  background-color: #047857;
+/* Home Page Specifics */
+.home-intro p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
 
+/* General Button Style */
+.btn {
+    background-color: #d1ed9a;
+    color: #2F5249;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Overpass', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+}
 
+.btn:hover {
+    background-color: #DCCFC0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 182, 193, 0.5);
+}
 
+/* List Page Card Styles */
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: #333;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Input Fields */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Overpass', sans-serif;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #FFB6C1;
+    box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.3);
+}
+
+#addBtn {
+    width: 100%;
+}
+
+/* List Item Styles */
+#spotList {
+    list-style-type: none;
+}
+
+#spotList li {
+    background-color: #fff9fa;
+    padding: 15px;
+    border: 1px solid #fdeef0;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    transition: transform 0.2s ease;
+}
+
+#spotList li:hover {
+    transform: scale(1.02);
+}
+
+/* Strikethrough effect for completed items (NEW FEATURE) */
+#spotList li.completed {
+    text-decoration: line-through;
+    opacity: 0.6; /* Make it slightly faded */
+    background-color: #f0fdf5; /* A very light green background for completed items */
+}
+
+.spot-info {
+    flex-grow: 1;
+}
+
+.spot-info .spot-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.spot-info a {
+    color: #E5A3B2;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9em;
+    margin-top: 5px;
+    word-break: break-all;
+}
+
+.spot-info a:hover {
+    text-decoration: underline;
+}
+
+/* Select Button in the list (REVERTED TO ORIGINAL COLOR) */
+.select-btn {
+    padding: 8px 15px;
+    border: 2px solid #98D8AA; /* Original Pastel Green border */
+    background-color: transparent;
+    color: #98D8AA; /* Original Pastel Green text */
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Overpass', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Removed specific hover color for select-btn to maintain original behavior */
+/* The default transition will still apply to other properties on hover */
+
+.select-btn.selected {
+    background-color: #98D8AA; /* Original Pastel Green background when selected */
+    color: white; /* White text on selected green button */
+    border-color: #98D8AA; /* Original Pastel Green border when selected */
+}
