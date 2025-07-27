@@ -24,13 +24,13 @@ body {
     width: 100%;
     background-color: #d1ed9a;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    padding: 30px 5%;
-    margin-bottom: 30px;
+    padding: 20px 5%;
+    margin-bottom: 40px;
 }
 
 .banner h1 {
     color: #437057;
-    font-size: 80px;
+    font-size: 70px;
     font-weight: bold;
 }
 
