@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="list1-page">
+
+    <div class="banner">
+        <h1><a href="index.html">Spots📍</a></h1>
+    </div>
+
+    <div class="content-container">
+        <div class="card">
+            <h2>List 1</h2> <input type="text" id="spotName" placeholder="Enter spot name">
+            <input type="text" id="spotLink" placeholder="Enter link (optional)">
+            <button id="addBtn" class="btn">Add Spot</button>
+            <ul id="spotList">
+                </ul>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // PASTE YOUR firebaseConfig OBJECT HERE from Firebase Console
+        const firebaseConfig = {
+            apiKey: "AIzaSyD8jvCNUvnnrM0fBQ_6YcXnYFbfY49CH7s", // IMPORTANT: Put your actual API Key here
+            authDomain: "spots-755a4.firebaseapp.com",
+            projectId: "spots-755a4",
+            storageBucket: "spots-755a4.firebasestorage.app",
+            messagingSenderId: "300240029777",
+            appId: "1:300240029777:web:c871ed655d1e592554d070",
+            measurementId: "G-MR9SVRPCC2"
+        };
+
+        // Initialize Firebase (USING THE CORRECT COMPAT SYNTAX)
+        firebase.initializeApp(firebaseConfig);
+
+        // Get a reference to the Firestore database service (USING THE CORRECT COMPAT SYNTAX)
+        const db = firebase.firestore();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
